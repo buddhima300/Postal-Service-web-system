@@ -1,0 +1,54 @@
+@import url(../components/colors.css);
+.foot {
+  background-color: var(--secondary-color);
+  height: auto;
+  width: auto;
+}
+.footercontent {
+  display: flex;
+  justify-content: flex-end;
+  padding-inline-start: 10vh;
+  padding-inline-end: 10vh;
+}
+
+.listone {
+  display: block;
+  margin-top: 5vh;
+  color: white;
+  margin-right: 21vh;
+}
+
+.listone ul {
+  list-style: none;
+}
+.listone ul li {
+  margin-top: 35px;
+}
+.listone ul li i {
+  font-size: 40px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 2px 2px;
+}
+.listone ul li i:hover {
+  font-size: 50px;
+  border: 2px solid rgb(226, 4, 4);
+  border-radius: 10px;
+  padding: 2px 2px;
+  color: #e20000;
+}
+.listone ul li a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.listone ul li a:hover {
+  color: rgb(219, 1, 1);
+  text-decoration: none;
+  letter-spacing: 4px;
+}
+
+.siteinfo {
+  margin-top: 10vh;
+  color: white;
+}

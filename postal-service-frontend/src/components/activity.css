@@ -1,0 +1,34 @@
+.headsection {
+  margin-top: 10%;
+}
+
+.activitycard {
+  width: 100%;
+  height: fit-content;
+  border-radius: 250px;
+  background-color: white;
+  /* padding-left: 10%; */
+  display: inline-flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.activitycard {
+  margin: 10px;
+}
+.cardimg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 5px;
+}
+.cardimg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.carddetails {
+  margin-left: 10%;
+  line-height: 5px;
+  margin-top: 10px;
+}
