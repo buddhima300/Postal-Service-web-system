@@ -98,7 +98,8 @@ postal-service-encryption/
 
 ## 👨‍💻 Author
 - **Buddhima Chathuranga Lakmal**  
-  **University:**Student at Horizon Campus
+  **University:** Student at Horizon Campus
+  
   **Email**: buddhimachathuranga300@gmail.com  
   **LinkedIn**: [LinkedIn Profile]([https://www.linkedin.com/in/your-profile](https://www.linkedin.com/in/buddhima-chathuranga/))  
 
