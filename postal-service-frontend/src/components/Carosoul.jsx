@@ -1,7 +1,7 @@
 import React from "react";
-import banner1 from "../images/project banners.jpg";
-import banner2 from "../images/project banners2.jpg";
-import banner3 from "../images/project banners3.jpg";
+import banner1 from "../images/project banners 1.png";
+import banner2 from "../images/project banners 2.png";
+import banner3 from "../images/project banners 3.png";
 
 export default function Carosoul() {
   return (

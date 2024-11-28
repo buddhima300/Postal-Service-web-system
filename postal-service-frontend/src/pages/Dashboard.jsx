@@ -1,7 +1,7 @@
 // import React, { useState } from "react";
 import "../stylings/dashboard.css";
 import SideBarMenuDashboard from "../components/sideBarMenuDashboard";
-import bgimg from "../images/Homepage interface bg3.png";
+import bgimg from "../images/bottom image.png";
 import FeatureCard from "../components/FeatureCard";
 import Footer from "../components/Footer";
 import Carosoul from "../components/Carosoul";
