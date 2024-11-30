@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../stylings/encryption.css";
-import bgimg from "../images/project small banners1.jpg";
+import bgimg from "../images/project small banners1.png";
 import logoimg from "../components/post office logo-black.png";
 import SideBarMenuDashboard from "../components/sideBarMenuDashboard";
 import Footer from "../components/Footer";
@@ -9,6 +9,7 @@ import Carosoul from "../components/Carosoul";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
+import Process from "../components/Process";
 
 export default function Encryption() {
   //get the primary key from session storage when user login
@@ -156,6 +157,10 @@ export default function Encryption() {
               }}
             ></i>
           </div>
+        </div>
+        {/* start of middle section of showing how it works */}
+        <div className="working-section">
+          <Process />
         </div>
         {/* start bottom section design */}
         <div className="bottom col-md-12">

@@ -10,6 +10,13 @@
   display: flex;
   flex-wrap: wrap;
 }
+/* how it work section in encryption page */
+.working-section {
+  /* background-image: url("../images/flow.png"); */
+  background-color: white;
+  width: 100%;
+  padding: 5%;
+}
 .leftside {
   /* border: 2px solid red; */
 }
