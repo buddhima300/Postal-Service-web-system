@@ -1,3 +1,7 @@
+h2 {
+  text-align: center;
+  color: #969595;
+}
 .cards {
   display: inline-flex;
   width: 100%;

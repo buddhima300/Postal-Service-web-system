@@ -5,6 +5,7 @@ import stepimg from "../images/flow 1.png";
 function Process() {
   return (
     <div>
+      <h2>-- How It Works --</h2>
       <div className="cards">
         {/* step 1 */}
         <div className="step1">

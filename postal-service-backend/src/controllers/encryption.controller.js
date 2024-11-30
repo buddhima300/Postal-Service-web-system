@@ -5,6 +5,7 @@ var nodeRSA = require("node-rsa"); // use node-rsa library to encrypt the text w
 const PDFDocument = require("pdfkit");
 const path = require("path");
 const { encryptionModel } = require("../models/user.model");
+const crypto = require("crypto");
 
 //first do the RSA encryption for the extracted text
 exports.RSAencryptionController = async (req, res) => {
@@ -30,6 +31,21 @@ exports.RSAencryptionController = async (req, res) => {
       // Handle AES, DES, and other algorithms...
       else if (algorithm === "AES") {
         // AES encryption logic here
+        // generating keys from the Primary Key of the reciever
+        const slicekey = publicKey.slice(0, 32); // slice the key to take 32-bit key from recipent public key
+
+        const key = Buffer.from(slicekey); // 32-byte custom key for AES-256
+        const iv = crypto.randomBytes(16); // Generate a random 16-byte IV
+
+        // creating a function expression to encrypt text with AES
+        const encrypt = (text, Key, iv) => {
+          const cipher = crypto.createCipheriv("aes-256-cbc", key, iv);
+          let encrypted = cipher.update(text, "utf8", "hex");
+          encrypted += cipher.final("hex");
+          return encrypted;
+        };
+        encryptedText = encrypt(extractedText, key, iv);
+        console.log("AES button has selected");
       } else if (algorithm === "DES") {
         // DES encryption logic here
       } else if (algorithm === "3DES") {
