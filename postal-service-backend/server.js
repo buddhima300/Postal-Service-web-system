@@ -29,6 +29,7 @@ app.use(express.json());
 
 //following will directed to the routing of the authenication
 app.use("/auth", cors(), authRouter);
+// following are directed to the routes of encryption and decryptions
 app.use("/api", cors(), uploadRoute);
 app.use("/api", cors(), encryptRoute);
 

@@ -5,6 +5,7 @@ import Encryption from "./pages/Encryption";
 import Decryption from "./pages/Decryption";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from "./pages/Profile";
+import Loader from "./components/Loader";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/encrypt" element={<Encryption />}></Route>
           <Route path="/decrypt" element={<Decryption />}></Route>
           <Route path="/profile" element={<Profile />}></Route>
+          {/* <Route path="/loader" element={<Loader />}></Route> */}
         </Routes>
       </BrowserRouter>
 

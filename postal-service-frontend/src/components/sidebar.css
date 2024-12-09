@@ -48,7 +48,8 @@ body.dark {
   height: 100%;
   width: 350px;
   padding: 10px 14px;
-  background: var(--secondary-color);
+  /* background: var(--secondary-color); */
+  background: radial-gradient(rgb(217, 22, 86), rgb(100, 13, 95));
   transition: var(--tran-05);
   z-index: 100;
 }
@@ -202,13 +203,13 @@ body.dark .sidebar header .toggle {
 .sidebar li a:hover {
   /* background-color: var(--dark-color); */
   /* border: 2px solid white; */
-  border-bottom: 5px solid var(--basic-color);
-  border-left: 5px solid var(--basic-color);
+  border-bottom: 5px solid var(--yellow-color);
+  border-left: 5px solid var(--yellow-color);
   font-weight: 600;
 }
 .sidebar li a:hover .icon,
 .sidebar li a:hover .text {
-  color: var(--primary-color);
+  color: var(--yellow-color);
   font-weight: 600;
   font-size: 20px;
 }
