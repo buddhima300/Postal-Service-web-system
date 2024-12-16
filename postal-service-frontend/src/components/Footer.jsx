@@ -1,7 +1,9 @@
 import React from "react";
 import "./footer.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
+  const navigate = useNavigate();
   return (
     <div className="foot">
       <div className="footercontent">
@@ -9,13 +11,13 @@ export default function Footer() {
         <div className="listone">
           <ul>
             <li>
-              <a href="#">DASHBOARD</a>
+              <a onClick={() => navigate("/homepage")}>DASHBOARD</a>
             </li>
             <li>
-              <a href="#">ENCRYPTION</a>
+              <a onClick={() => navigate("/encrypt")}>ENCRYPTION</a>
             </li>
             <li>
-              <a href="#">DECRYPTION</a>
+              <a onClick={() => navigate("/decrypt")}>DECRYPTION</a>
             </li>
             <li>
               <a href="#">MAIL TRACKER</a>
@@ -24,7 +26,7 @@ export default function Footer() {
               <a href="#">SUPPORT</a>
             </li>
             <li>
-              <a href="#">PROFILE</a>
+              <a onClick={() => navigate("/profile")}>PROFILE</a>
             </li>
           </ul>
         </div>

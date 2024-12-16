@@ -133,7 +133,8 @@
   margin-right: 5px;
 }
 .RSA-btn:hover {
-  background-color: var(--basic-color);
+  /* background-color: var(--basic-color); */
+  background: radial-gradient(rgb(217, 22, 86), rgb(100, 13, 95));
   color: white;
 }
 
@@ -165,6 +166,7 @@
   margin-top: 30px;
   /* margin-bottom: 20%; */
   margin-left: 5%;
+  background-color: var(--yellow-color);
 }
 #clear-btn:hover {
   background-color: rgb(255, 166, 0);
@@ -189,11 +191,11 @@
   margin-left: 5px;
 }
 #Download-btn:hover {
-  background-color: rgb(255, 166, 0);
+  background: radial-gradient(rgb(217, 22, 86), rgb(100, 13, 95));
   color: white;
 }
 
 .RSA-btn.selected {
-  background-color: var(--basic-color);
+  background: radial-gradient(rgb(217, 22, 86), rgb(100, 13, 95));
   color: white;
 }

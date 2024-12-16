@@ -40,7 +40,8 @@ h2 {
   height: 5cm;
   text-align: center;
   padding-top: 2%;
-  border-bottom: 10px solid rgb(209, 255, 140);
+  /* border-bottom: 10px solid rgb(209, 255, 140); */
+  /* border-bottom: 10px solid radial-gradient(rgb(217, 22, 86), rgb(100, 13, 95)); */
 }
 .step1 b {
   font-size: 20px;
