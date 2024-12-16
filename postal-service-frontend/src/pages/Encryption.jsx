@@ -96,6 +96,9 @@ export default function Encryption() {
         } else {
           console.error("Encryption failed");
         }
+      } else if (response.status === 500) {
+        const notify = () => toast(response.data.message);
+        notify();
       }
       // Check if encryption was successful
     } catch (error) {
