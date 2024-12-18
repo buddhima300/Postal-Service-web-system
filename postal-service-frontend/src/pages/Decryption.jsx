@@ -101,6 +101,8 @@ export default function Encryption() {
     } catch (error) {
       //console the error to detect the error
       console.log(error);
+      const notify = () => toast("Decryption Failed");
+      notify();
     }
   };
   //end of encryption process

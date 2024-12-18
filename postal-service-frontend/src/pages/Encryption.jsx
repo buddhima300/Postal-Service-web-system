@@ -96,14 +96,14 @@ export default function Encryption() {
         } else {
           console.error("Encryption failed");
         }
-      } else if (response.status === 500) {
-        const notify = () => toast(response.data.message);
-        notify();
       }
+
       // Check if encryption was successful
     } catch (error) {
       //console the error to detect the error
       console.log(error);
+      const notify = () => toast("Encryption Failed");
+      notify();
     }
   };
   //end of encryption process

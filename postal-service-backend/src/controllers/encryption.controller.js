@@ -53,6 +53,9 @@ exports.RSAencryptionController = async (req, res) => {
       }
     } else {
       console.log("Reciever public key is missing");
+      res.status(500).json({
+        message: "Reciever oublic key is missing",
+      });
     }
 
     //importing the required libraries to convert into  pdf format
