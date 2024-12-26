@@ -181,7 +181,7 @@
   margin-top: 30px;
   /* margin-bottom: 20%; */
   margin-left: 5%;
-  background-color: var(--secondary-color);
+  background-color: gray;
 }
 #clear-btn:hover {
   background: radial-gradient(rgb(220, 60, 23), rgb(122, 0, 37), rgb(64, 0, 0));
@@ -194,19 +194,21 @@
   margin-top: 30px;
   /* margin-bottom: 20%; */
   margin-left: 5%;
-  background-color: var(--red-color);
+  /* background-color: var(--red-color); */
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 #Download-btn a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 #Download-btn i {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 20px;
   margin-left: 5px;
 }
 #Download-btn:hover {
-  background: radial-gradient(rgb(220, 60, 23), rgb(122, 0, 37), rgb(64, 0, 0));
+  /* background: radial-gradient(rgb(220, 60, 23), rgb(122, 0, 37), rgb(64, 0, 0)); */
   color: white;
 }
 

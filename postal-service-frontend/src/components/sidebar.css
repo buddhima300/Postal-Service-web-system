@@ -48,8 +48,9 @@ body.dark {
   height: 100%;
   width: 350px;
   padding: 10px 14px;
-  /* background: var(--secondary-color); */
+  /* background: var(--red-color); */
   background: radial-gradient(rgb(220, 60, 23), rgb(122, 0, 37), rgb(64, 0, 0));
+
   transition: var(--tran-05);
   z-index: 100;
 }

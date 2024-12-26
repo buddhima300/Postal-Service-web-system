@@ -87,7 +87,7 @@ export default function LoginForm() {
         <div className="logform">
           <header className="header-section">
             <div className="panel1">
-              <img src={logoimg} alt="" srcset="" />
+              {/* <img src={logoimg} alt="" srcset="" /> */}
             </div>
           </header>
           <div className="wrapper">

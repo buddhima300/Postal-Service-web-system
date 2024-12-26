@@ -11,13 +11,19 @@ export default function Footer() {
         <div className="listone">
           <ul>
             <li>
-              <a onClick={() => navigate("/homepage")}>DASHBOARD</a>
+              <a onClick={() => navigate("/homepage")} href="#">
+                DASHBOARD
+              </a>
             </li>
             <li>
-              <a onClick={() => navigate("/encrypt")}>ENCRYPTION</a>
+              <a onClick={() => navigate("/encrypt")} href="#">
+                ENCRYPTION
+              </a>
             </li>
             <li>
-              <a onClick={() => navigate("/decrypt")}>DECRYPTION</a>
+              <a onClick={() => navigate("/decrypt")} href="#">
+                DECRYPTION
+              </a>
             </li>
             <li>
               <a href="#">MAIL TRACKER</a>
