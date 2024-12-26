@@ -24,13 +24,15 @@
   padding: 5%;
 }
 .leftside {
-  background-color: var(--yellow-color);
+  background-color: white;
+  margin: 1% 0%;
 }
 .rightside {
   /* border: 2px solid rgb(0, 255, 42); */
   display: block;
   text-align: center;
-  background-color: var(--yellow-color);
+  background-color: white;
+  margin: 1% 0%;
 }
 .rightside label {
   font-size: 30px;
@@ -63,8 +65,9 @@
 }
 .uploadbg {
   /* margin: 50% 25%; */
-  margin-top: 50%;
-  margin-left: 15%;
+  margin-top: 5%;
+
+  margin-left: 30%;
   height: auto;
   width: 580px;
   border: 3px dashed var(--ash-color);
@@ -94,13 +97,19 @@
 /* bottom right styles */
 .bottomright {
   /* border: 2px solid rgb(0, 102, 255); */
+  padding-left: 15%;
   padding-top: 5%;
-  padding-right: 20px;
+  padding-right: 15%;
 }
 .extractedtext textarea {
-  padding-top: 20px;
+  width: 100%;
+  border: 3px solid var(--ash-color);
+  padding-top: 250px;
   overflow-y: scroll;
   text-align: inherit;
+  background-image: url(../images/letter\ head.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .algorithmsection {
@@ -158,8 +167,7 @@
   margin-top: 30px;
   margin-left: auto;
   font-weight: 600;
-  /* margin-bottom: 20%; */
-  background-color: var(--red-color);
+  background-color: var(--basic-color);
 }
 #Encrypt-btn:hover {
   margin-top: 30px;
@@ -173,7 +181,7 @@
   margin-top: 30px;
   /* margin-bottom: 20%; */
   margin-left: 5%;
-  background-color: var(--orange-color);
+  background-color: var(--secondary-color);
 }
 #clear-btn:hover {
   background: radial-gradient(rgb(220, 60, 23), rgb(122, 0, 37), rgb(64, 0, 0));
@@ -185,8 +193,8 @@
   font-weight: 600;
   margin-top: 30px;
   /* margin-bottom: 20%; */
-  /* margin-left: 1%; */
-  background-color: green;
+  margin-left: 5%;
+  background-color: var(--red-color);
 }
 #Download-btn a {
   color: white;

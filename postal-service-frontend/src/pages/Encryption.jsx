@@ -166,9 +166,21 @@ export default function Encryption() {
         <div className="working-section">
           <Process />
         </div>
+
+        <div className="bottomleft col-md-12">
+          <div className="uploadbg">
+            <div className="uploadfooter">
+              <Uploading />
+              <button class="btn btn-primary" onClick={getExtractionData}>
+                EXTRACT TEXT
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* start bottom section design */}
         <div className="bottom col-md-12">
-          <div className="bottomleft col-md-6">
+          {/* <div className="bottomleft col-md-6">
             <div className="uploadbg">
               <div className="uploadfooter">
                 <Uploading />
@@ -177,8 +189,8 @@ export default function Encryption() {
                 </button>
               </div>
             </div>
-          </div>
-          <div className="bottomright col-md-6">
+          </div> */}
+          <div className="bottomright col-md-12">
             <div className="extractedtext">
               <textarea
                 name="textarea1"
@@ -187,16 +199,8 @@ export default function Encryption() {
                 id="extracted_text-area"
                 className="form-control"
                 rows={25}
+                placeholder="This editable text area allows users to review and modify the extracted content as needed before proceeding with encryption or other operations. The editable feature ensures flexibility, enabling users to correct errors or make adjustments to the extracted text directly within the application. This streamlined process enhances user convenience and ensures that the text is accurate and ready for further secure processing."
               ></textarea>
-              {/* <input
-                type="text"
-                className="form-control"
-                value={textExtracted}
-                onChange={(e) => setTextExtracted(e.target.value)}
-                id="recipentkey"
-                placeholder="extracted text here"
-                required
-              /> */}
             </div>
             {/* recipent primary key section */}
             <div className="algorithmsection">
@@ -252,7 +256,7 @@ export default function Encryption() {
                 >
                   AES
                 </button>
-                {/* <button
+                <button
                   type="button"
                   className={`RSA-btn ${
                     selectedAlgorithm === "DES" ? "selected" : ""
@@ -260,8 +264,8 @@ export default function Encryption() {
                   onClick={() => handleAlgorithmChange("DES")}
                 >
                   DES
-                </button> */}
-                {/* <button
+                </button>
+                <button
                   type="button"
                   className={`RSA-btn ${
                     selectedAlgorithm === "3DES" ? "selected" : ""
@@ -269,7 +273,7 @@ export default function Encryption() {
                   onClick={() => handleAlgorithmChange("3DES")}
                 >
                   3DES
-                </button> */}
+                </button>
               </div>
             </div>
             {/* document format section */}
@@ -307,7 +311,7 @@ export default function Encryption() {
                 ENCRYPT DOCUMENT
               </button>
               <button
-                class="btn btn-secondary"
+                class="btn btn-dark"
                 onClick={clearTextArea}
                 id="clear-btn"
               >

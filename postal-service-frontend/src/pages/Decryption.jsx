@@ -110,8 +110,8 @@ export default function Encryption() {
   return (
     <div classNameName="encryptpage">
       <SideBarMenuDashboard />
-      <img src={bgimg} alt="" srcset="" />
-      <Carosoul />
+      {/* <img src={bgimg} alt="" srcset="" /> */}
+      {/* <Carosoul /> */}
 
       {/* start of header section */}
       <div className="panel1 col-md-12">
@@ -164,9 +164,21 @@ export default function Encryption() {
         <div className="working-section">
           <Process />
         </div>
+
+        <div className="bottomleft col-md-12">
+          <div className="uploadbg">
+            <div className="uploadfooter">
+              <Uploading2 />
+              <button class="btn btn-primary" onClick={getExtractionData}>
+                EXTRACT TEXT
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* start bottom section design */}
         <div className="bottom col-md-12">
-          <div className="bottomleft col-md-6">
+          {/* <div className="bottomleft col-md-6">
             <div className="uploadbg">
               <div className="uploadfooter">
                 <Uploading2 />
@@ -175,8 +187,8 @@ export default function Encryption() {
                 </button>
               </div>
             </div>
-          </div>
-          <div className="bottomright col-md-6">
+          </div> */}
+          <div className="bottomright col-md-12">
             <div className="extractedtext">
               <textarea
                 name="textarea1"
