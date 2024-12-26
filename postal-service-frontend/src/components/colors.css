@@ -1,11 +1,12 @@
 :root {
   --basic-color: rgb(165, 1, 1);
-  --secondary-color: rgb(48, 48, 48);
+  --red-color: rgb(122, 0, 37);
+  --secondary-color: rgb(64, 0, 0);
   --ash-color: #ebeaea;
   --dark-color: #1d1d1d;
   --success-color: rgb(1, 165, 1);
   --purple-color: rgb(100, 13, 95);
   --pink-color: rgb(217, 22, 86);
-  --orange-color: rgb(235, 91, 0);
+  --orange-color: rgb(220, 60, 23);
   --yellow-color: rgb(255, 178, 0);
 }

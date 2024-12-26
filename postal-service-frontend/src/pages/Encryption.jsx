@@ -111,8 +111,9 @@ export default function Encryption() {
   return (
     <div classNameName="encryptpage">
       <SideBarMenuDashboard />
-      <img src={bgimg} alt="" srcset="" />
-      <Carosoul />
+      <div className="pageimg">
+        {/* <img src={bgimg} alt="" srcset="" /> */}
+      </div>
 
       {/* start of header section */}
       <div className="panel1 col-md-12">
@@ -251,7 +252,7 @@ export default function Encryption() {
                 >
                   AES
                 </button>
-                <button
+                {/* <button
                   type="button"
                   className={`RSA-btn ${
                     selectedAlgorithm === "DES" ? "selected" : ""
@@ -259,8 +260,8 @@ export default function Encryption() {
                   onClick={() => handleAlgorithmChange("DES")}
                 >
                   DES
-                </button>
-                <button
+                </button> */}
+                {/* <button
                   type="button"
                   className={`RSA-btn ${
                     selectedAlgorithm === "3DES" ? "selected" : ""
@@ -268,7 +269,7 @@ export default function Encryption() {
                   onClick={() => handleAlgorithmChange("3DES")}
                 >
                   3DES
-                </button>
+                </button> */}
               </div>
             </div>
             {/* document format section */}

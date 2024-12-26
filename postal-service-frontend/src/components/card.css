@@ -5,7 +5,7 @@
 }
 #features {
   text-align: center;
-  margin-left: 45%;
+  margin-left: 50%;
   font-size: 50px;
   margin-top: 10vh;
   color: rgb(0, 0, 0);
@@ -19,7 +19,8 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 50px;
-  padding-left: 100px;
+
+  margin-left: 300px;
 }
 
 .cardbg {
@@ -33,7 +34,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   margin-right: 3vh;
-  /* border: 5px solid rgb(29, 29, 29); */
+
   border-radius: 20px;
   margin-top: 20px;
 }
@@ -64,7 +65,7 @@
   flex-direction: row;
 }
 .cardbottom p {
-  background-color: var(--secondary-color);
+  background-color: var(--dark-color);
   padding: 20px;
   border-radius: 25px;
   font-weight: 600;

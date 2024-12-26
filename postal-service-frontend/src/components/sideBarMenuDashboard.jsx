@@ -16,10 +16,10 @@ export default function SideBarMenuDashboard() {
     const handleSearchClick = () => {
       sidebar.classList.remove("close");
     };
-    toggle.addEventListener("click", handleToggleClick);
+    // toggle.addEventListener("click", handleToggleClick);
 
     return () => {
-      toggle.removeEventListener("click", handleToggleClick);
+      // toggle.removeEventListener("click", handleToggleClick);
     };
   }, []);
 
@@ -39,7 +39,7 @@ export default function SideBarMenuDashboard() {
               <span className="profession">SRI LANKA</span>
             </div>
           </div>
-          <i className="bx bx-chevron-right toggle"></i>
+          {/* <i className="bx bx-chevron-right toggle"></i> */}
         </header>
 
         {/* menu bar list */}

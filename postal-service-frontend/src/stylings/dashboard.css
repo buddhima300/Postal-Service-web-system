@@ -4,6 +4,8 @@
 
 .homepage {
   background-color: var(--ash-color);
+  display: inline-flex;
+  margin-left: auto;
 }
 
 .user h1 {
@@ -11,7 +13,7 @@
   position: absolute;
   /* background-color: white; */
   font-size: 20px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   padding-left: 30%;
   padding-top: 2%;
   width: 1880px;
@@ -20,9 +22,11 @@
 .column {
   display: flex;
   flex-direction: column;
-  margin-left: 350px;
+  margin: 0 480px;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(255, 255, 255);
-  margin-top: 50px;
+  margin-top: 150px;
   border-radius: 30px;
 }
 .hero .column h1 {
@@ -47,7 +51,7 @@
   padding-bottom: 30px;
 }
 .buttons button {
-  background: radial-gradient(rgb(217, 22, 86), rgb(100, 13, 95));
+  background: radial-gradient(rgb(220, 60, 23), rgb(122, 0, 37), rgb(64, 0, 0));
 }
 .btn {
   padding: 14px 26px;

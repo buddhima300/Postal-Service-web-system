@@ -1,7 +1,7 @@
 // import React, { useState } from "react";
 import "../stylings/dashboard.css";
 import SideBarMenuDashboard from "../components/sideBarMenuDashboard";
-import bgimg from "../images/bottom image.png";
+import bgimg from "../images/Homepage interface bg.jpg";
 import FeatureCard from "../components/FeatureCard";
 import Footer from "../components/Footer";
 import Carosoul from "../components/Carosoul";
@@ -48,39 +48,39 @@ function Dashboard() {
     <main className="homepage">
       <SideBarMenuDashboard />
       {/* Hero Start */}
-      <div className="user">
-        <h1>
-          Welcome to secured postal service <br />
-          {username}
-        </h1>
-      </div>
-      <div className="imgcontainer">
-        <img src={bgimg} alt="" />
-      </div>
+      <div className="dash">
+        <div className="user">
+          <h1>
+            Welcome to secured postal service <br />
+            {username}
+          </h1>
+        </div>
+        <div className="imgcontainer">{/* <img src={bgimg} alt="" /> */}</div>
 
-      <section className="hero">
-        <div className="row container">
-          <div className="column">
-            <h1>SECURE | MAIL | DELIVERY</h1>
-            <p>
-              Sri Lankan postal service expanding existing mail system to offer
-              high demanding security features to protect sensitive information
-              from intermediates by integrating robust web-based encryption and
-              decryption technologies.
-            </p>
-            <div className="buttons">
-              <button className="btn">Read More</button>
-              <button className="btn">Contact Us</button>
+        <section className="hero">
+          <div className="row container">
+            <div className="column">
+              <h1>SECURE | MAIL | DELIVERY</h1>
+              <p>
+                Sri Lankan postal service expanding existing mail system to
+                offer high demanding security features to protect sensitive
+                information from intermediates by integrating robust web-based
+                encryption and decryption technologies.
+              </p>
+              <div className="buttons">
+                <button className="btn">Read More</button>
+                <button className="btn">Contact Us</button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* this is the feature card section */}
-      <div>
-        <FeatureCard />
-        <Carosoul />
-        <Footer />
+        {/* this is the feature card section */}
+        <div>
+          <FeatureCard />
+          {/* <Carosoul /> */}
+          <Footer />
+        </div>
       </div>
     </main>
   );

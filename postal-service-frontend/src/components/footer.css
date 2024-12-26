@@ -1,6 +1,6 @@
 @import url(../components/colors.css);
 .foot {
-  background-color: var(--secondary-color);
+  background-color: var(--red-color);
   height: auto;
   width: auto;
 }
