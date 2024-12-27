@@ -1,7 +1,8 @@
 @import url(../components/colors.css);
 
 .panel1 {
-  background-color: #ebeaea;
+  /* background-color: #ebeaea; */
+  background-color: white;
 }
 #features {
   text-align: center;

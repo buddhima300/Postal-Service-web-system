@@ -8,6 +8,7 @@ import Carosoul from "../components/Carosoul";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Headersection from "../components/Headersection";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -47,6 +48,7 @@ function Dashboard() {
   return (
     <main className="homepage">
       <SideBarMenuDashboard />
+
       {/* Hero Start */}
       <div className="dash">
         <div className="user">
@@ -56,7 +58,7 @@ function Dashboard() {
           </h1>
         </div>
         <div className="imgcontainer">{/* <img src={bgimg} alt="" /> */}</div>
-
+        <Headersection />
         <section className="hero">
           <div className="row container">
             <div className="column">

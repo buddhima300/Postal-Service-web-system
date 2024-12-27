@@ -1,0 +1,102 @@
+.header {
+  /* border: 2px solid rebeccapurple; */
+  height: auto;
+  width: auto;
+  padding-left: 370px;
+  margin-top: 6%;
+  display: flex;
+  background-color: white;
+  /* padding: 20% 0%; */
+}
+.left {
+  display: block;
+  margin: 0% auto;
+  text-align: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.left h5 {
+  color: var(--dark-color);
+  margin: 2% 0%;
+  font-size: 20px;
+}
+.left h1 {
+  color: var(--red-color);
+  margin: 2% 0%;
+  font-size: 45px;
+  width: 80%;
+  text-align: left;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.left h1 span {
+  color: var(--yellow-color);
+  font-size: 90px;
+  text-transform: uppercase;
+}
+
+.left p {
+  color: gray;
+  width: 80%;
+  text-align: justify;
+}
+
+.right img {
+  height: auto;
+  width: 100%;
+}
+/* From Uiverse.io by zjssun */
+button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--yellow-color);
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 3px solid var(--yellow-color);
+  transition: 0.5s ease;
+  user-select: none;
+  margin-top: 5%;
+}
+
+#btn:hover,
+:focus {
+  color: #ffffff;
+  background: var(--yellow-color);
+  border: 1px solid var(--yellow-color);
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px var(--yellow-color), 0 0 20px var(--yellow-color),
+    0 0 50px var(--yellow-color), 0 0 100px var(--yellow-color);
+}
+
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  /* white-space: unset; */
+  animation: typing 5s infinite, blink-caret 0.75s infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
