@@ -2,6 +2,7 @@ import React from "react";
 import "./headersection.css";
 import sideimg from "../images/sideimg.png";
 import sideimg2 from "../images/Encryption.png";
+import sideimg3 from "../images/sidebg.png";
 
 function Headersection() {
   return (
@@ -57,7 +58,7 @@ function Headersection() {
       {/* third section */}
       <div className="header col-md-12">
         {/* right section code lines */}
-        <div className="left col-md-6 ">
+        <div className="left col-md-6 typewriter">
           <h5>Token-based authentication and role-based access control</h5>
           <h1>
             <span>Enhanced Security</span>
@@ -76,10 +77,10 @@ function Headersection() {
             GDPR, ensuring that user data is handled with the highest levels of
             security and compliance.
           </p>
-          <button id="btn">Let's get start</button>
+          <button id="btn">Learn more about security</button>
         </div>
         <div className="right col-md-6">
-          <img src={sideimg2} alt="" srcset="" />
+          <img src={sideimg3} alt="" srcset="" />
         </div>
       </div>
     </div>

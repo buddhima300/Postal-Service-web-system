@@ -7,20 +7,6 @@ export default function SideBarMenuDashboard() {
   useEffect(() => {
     const body = document.querySelector("body");
     const sidebar = body.querySelector("nav");
-    const toggle = body.querySelector(".toggle");
-
-    const handleToggleClick = () => {
-      sidebar.classList.toggle("close");
-    };
-
-    const handleSearchClick = () => {
-      sidebar.classList.remove("close");
-    };
-    // toggle.addEventListener("click", handleToggleClick);
-
-    return () => {
-      // toggle.removeEventListener("click", handleToggleClick);
-    };
   }, []);
 
   const navigate = useNavigate();
