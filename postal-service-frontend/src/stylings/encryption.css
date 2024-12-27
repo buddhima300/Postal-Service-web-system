@@ -146,6 +146,7 @@
   height: 3vh;
   border-radius: 20px;
   margin-right: 5px;
+  padding-bottom: 30px;
 }
 .RSA-btn:hover {
   /* background-color: var(--basic-color); */

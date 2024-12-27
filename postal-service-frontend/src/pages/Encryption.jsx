@@ -10,6 +10,7 @@ import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import Process from "../components/Process";
+import Headersection from "../components/Headersection";
 
 export default function Encryption() {
   //get the primary key from session storage when user login
@@ -162,6 +163,7 @@ export default function Encryption() {
             ></i>
           </div>
         </div>
+
         {/* start of middle section of showing how it works */}
         <div className="working-section">
           <Process />

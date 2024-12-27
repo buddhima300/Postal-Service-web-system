@@ -19,6 +19,7 @@
   color: var(--dark-color);
   margin: 2% 0%;
   font-size: 20px;
+  text-transform: capitalize;
 }
 .left h1 {
   color: var(--red-color);
@@ -33,6 +34,20 @@
   color: var(--yellow-color);
   font-size: 90px;
   text-transform: uppercase;
+}
+.left:nth-child(2) h1 span {
+  color: rgb(145, 76, 76);
+  font-size: 90px;
+  text-transform: uppercase;
+}
+.left:nth-child(2) h1 {
+  color: rgb(192, 192, 192);
+  margin: 2% 0%;
+  font-size: 45px;
+  width: 80%;
+  text-align: left;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .left p {

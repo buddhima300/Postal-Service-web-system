@@ -9,17 +9,43 @@
   margin-left: auto;
 }
 
-.user h1 {
+.user {
+  /* background-color: var(--ash-color); */
+  margin-top: -1%;
+  padding-top: 5%;
+}
+#welcome {
   text-align: end;
   position: absolute;
-  /* background-color: white; */
+  margin-left: 370px;
   font-size: 20px;
-  color: rgb(0, 0, 0);
-  padding-left: 80%;
-  padding-top: 2%;
+  color: rgb(236, 236, 236);
   width: auto;
+  font-size: 80px;
+  font-family: Verdana;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
+.profile-pic {
+  width: 100%;
+  /* border: 2px solid red; */
+}
+.profile-pic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-left: 92%;
+  margin-top: -0.5%;
+}
+.profile-pic h1 {
+  margin-left: 92%;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  color: #8a8a8a;
+  text-transform: uppercase;
+}
 .column {
   display: flex;
   flex-direction: column;

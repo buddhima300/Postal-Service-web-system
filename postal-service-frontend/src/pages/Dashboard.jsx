@@ -1,10 +1,9 @@
 // import React, { useState } from "react";
 import "../stylings/dashboard.css";
 import SideBarMenuDashboard from "../components/sideBarMenuDashboard";
-import bgimg from "../images/Homepage interface bg.jpg";
+import bgimg from "../images/profile-test.png";
 import FeatureCard from "../components/FeatureCard";
 import Footer from "../components/Footer";
-import Carosoul from "../components/Carosoul";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -52,12 +51,13 @@ function Dashboard() {
       {/* Hero Start */}
       <div className="dash">
         <div className="user">
-          <h1>
-            Welcome to secured postal service <br />
-            {username}
-          </h1>
+          <h1 id="welcome">Welcome... </h1>
+          <div class="mt-3 mb-4 profile-pic">
+            <img src={bgimg} alt="" />
+            <h1>{username}</h1>
+          </div>
         </div>
-        <div className="imgcontainer">{/* <img src={bgimg} alt="" /> */}</div>
+
         <Headersection />
         <section className="hero">
           <div className="row container">
