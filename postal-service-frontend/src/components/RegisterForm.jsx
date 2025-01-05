@@ -80,7 +80,7 @@ export default function RegisterForm() {
       <div className="regform">
         <header>
           <div className="panel1">
-            <img src={logoimg} alt="" srcset="" />
+            {/* <img src={logoimg} alt="" srcset="" /> */}
           </div>
         </header>
         <div class="wrapper">
