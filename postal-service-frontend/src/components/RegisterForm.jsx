@@ -1,7 +1,6 @@
 import React from "react";
-import logoimg from "./post office logo-black.png";
 import "./loginform.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 
@@ -12,7 +11,7 @@ export default function RegisterForm() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   //handle the state changes in the form
   const onChangeName = (e) => {
@@ -65,7 +64,7 @@ export default function RegisterForm() {
     };
     //use axios to send the data to the backend
     axios
-      .post("http://localhost:5000/auth/signup", registerData)
+      .post("http://localhost:5001/auth/signup", registerData)
       .then((res) => {
         console.log(res);
         setSuccessMessage("Registration Successful");

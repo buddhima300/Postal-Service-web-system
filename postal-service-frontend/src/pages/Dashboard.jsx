@@ -25,7 +25,7 @@ function Dashboard() {
         setUserName(username); // set the name
 
         // Make an authenticated request with the Bearer token
-        const response = await axios.get("http://localhost:5000/auth/session", {
+        const response = await axios.get("http://localhost:5001/auth/session", {
           headers: {
             Authorization: `Bearer ${token}`, // Correct format for Bearer token
           },
@@ -80,7 +80,6 @@ function Dashboard() {
         {/* this is the feature card section */}
         <div>
           <FeatureCard />
-          {/* <Carosoul /> */}
           <Footer />
         </div>
       </div>

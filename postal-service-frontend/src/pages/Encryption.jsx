@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "../stylings/encryption.css";
-import bgimg from "../images/project small banners1.png";
 import logoimg from "../components/post office logo-black.png";
 import SideBarMenuDashboard from "../components/sideBarMenuDashboard";
 import Footer from "../components/Footer";
 import Uploading from "../components/Uploading";
-import Carosoul from "../components/Carosoul";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import Process from "../components/Process";
-import Headersection from "../components/Headersection";
 
 export default function Encryption() {
   //get the primary key from session storage when user login
@@ -32,7 +29,7 @@ export default function Encryption() {
 
   const getExtractionData = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/extracted");
+      const response = await axios.get("http://localhost:5001/api/extracted");
       if (response.status === 200) {
         console.log(response.data); // see the extracted text in console
         setTextExtracted(response.data.extractedText); // set the extracted text in text area in frontend
@@ -52,7 +49,7 @@ export default function Encryption() {
   useEffect(() => {
     const key = sessionStorage.getItem("primaryKey");
     const publicKey = sessionStorage.getItem("publicKey");
-
+    console.log(publicKey);
     if (key) {
       setPrimaryKey(key); // Set the primary key from session storage to state
       setPublicKey(publicKey);
@@ -80,7 +77,7 @@ export default function Encryption() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/encryption",
+        "http://localhost:5001/api/encryption",
         encryptionData
       );
       if (response.status === 200) {
@@ -320,7 +317,7 @@ export default function Encryption() {
                 CLEAR EXTRACTED TEXT
               </button>
               <button class="btn btn-secondary" id="Download-btn">
-                <a href={`http://localhost:5000/${fileUrl}`} download>
+                <a href={`http://localhost:5001/${fileUrl}`} download>
                   DOWNLOAD DOCUMENT
                 </a>
                 <i class="bx bx-download"></i>

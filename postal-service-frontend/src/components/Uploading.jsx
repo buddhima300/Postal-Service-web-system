@@ -8,7 +8,7 @@ const props = {
   name: "file",
   multiple: false, // discard multiple files upload
   accept: ".png", //specified the allowed file types in here
-  action: "http://localhost:5000/api/upload",
+  action: "http://localhost:5001/api/upload",
   onChange(info) {
     const { status } = info.file;
     if (status !== "uploading") {

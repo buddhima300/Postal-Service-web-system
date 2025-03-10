@@ -38,6 +38,6 @@ app.use("/uploads", express.static("uploads"));
 
 //creating the server
 const PORT = process.env.PORT;
-var server = app.listen(PORT, function () {
+app.listen(PORT, function () {
   console.log(`Express App running at http://127.0.0.1:${PORT}/`);
 });
