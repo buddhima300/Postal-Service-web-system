@@ -5,8 +5,8 @@
 .homepage {
   /* background-color: var(--ash-color); */
   background-color: white;
-  display: inline-flex;
-  margin-left: auto;
+  display: flex;
+  margin-left: 0;
 }
 
 .user {
@@ -47,14 +47,7 @@
   text-transform: uppercase;
 }
 .column {
-  display: flex;
-  flex-direction: column;
-  margin: 0 480px;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-  margin-top: 150px;
-  border-radius: 30px;
+  transform: translateX(35%);
 }
 .hero .column h1 {
   display: block;
@@ -68,11 +61,11 @@
 }
 .column p {
   text-align: center;
-  color: rgb(0, 0, 0);
+  color: rgb(179, 179, 179);
 }
 .buttons {
   display: flex;
-  margin-top: 40px;
+  /* margin-top: 0px; */
   gap: 20px;
   justify-content: center;
   padding-bottom: 30px;
@@ -98,4 +91,70 @@
 .btn:last-child:hover {
   background-color: #fff;
   color: #333;
+}
+
+/* media queries for responsive design */
+@media only screen and (max-width: 767px) {
+  /* .homepage {
+    display: block;
+  } */
+  .hero {
+    margin-top: 70%;
+    margin-right: 0;
+  }
+  .user #welcome {
+    margin-left: 20px;
+  }
+  .user div {
+    margin-left: -40px;
+  }
+  .profile-pic img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 93%;
+    margin-top: -0.5%;
+  }
+  .profile-pic h1 {
+    margin-left: 92%;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    color: #8a8a8a;
+    text-transform: uppercase;
+  }
+  .column {
+    transform: translateX(25%);
+  }
+}
+
+@media (max-width: 768px) and (max-width: 1024px) {
+  .hero {
+    margin-top: 30%;
+    margin-right: 0;
+  }
+  .user #welcome {
+    margin-left: 20px;
+  }
+  .user div {
+    margin-left: -40px;
+  }
+  .profile-pic img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 93%;
+    margin-top: -0.5%;
+  }
+  .profile-pic h1 {
+    margin-left: 92%;
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    color: #8a8a8a;
+    text-transform: uppercase;
+  }
+  .column {
+    transform: translateX(8%);
+  }
 }

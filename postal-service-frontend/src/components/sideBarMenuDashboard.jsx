@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from "react";
 import "./sidebar.css";
 import logoimg from "./post office logo.png";
@@ -5,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 export default function SideBarMenuDashboard() {
   useEffect(() => {
-    const body = document.querySelector("body");
-    const sidebar = body.querySelector("nav");
+    // const body = document.querySelector("body");
+    // const sidebar = body.querySelector("nav");
   }, []);
 
   const navigate = useNavigate();
@@ -68,17 +69,16 @@ export default function SideBarMenuDashboard() {
                   <span className="text nav-text">PROFILE</span>
                 </a>
               </li>
+              {/* menu bar bottom content */}
+              <div className="bottom-content">
+                <li>
+                  <a onClick={() => navigate("/")}>
+                    <i className="bx bx-log-out icon"></i>
+                    <span className="text nav-text">Logout</span>
+                  </a>
+                </li>
+              </div>
             </ul>
-          </div>
-
-          {/* menu bar bottom content */}
-          <div className="bottom-content">
-            <li>
-              <a onClick={() => navigate("/")}>
-                <i className="bx bx-log-out icon"></i>
-                <span className="text nav-text">Logout</span>
-              </a>
-            </li>
           </div>
         </div>
       </nav>

@@ -54,3 +54,16 @@
   margin-top: 10vh;
   color: white;
 }
+
+@media only screen and (max-width: 768px) {
+  .foot {
+    margin-left: 0px;
+    display: none;
+  }
+  .footercontent {
+    display: block;
+    justify-content: center;
+    padding-inline-start: 0vh;
+    padding-inline-end: 0vh;
+  }
+}

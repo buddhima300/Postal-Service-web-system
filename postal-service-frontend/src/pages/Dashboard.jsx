@@ -46,20 +46,24 @@ function Dashboard() {
 
   return (
     <main className="homepage">
-      <SideBarMenuDashboard />
+      <div>
+        <SideBarMenuDashboard />
+      </div>
 
-      {/* Hero Start */}
       <div className="dash">
-        <div className="user">
-          <h1 id="welcome">Welcome... </h1>
-          <div class="mt-3 mb-4 profile-pic">
-            <img src={bgimg} alt="" />
-            <h1>{username}</h1>
-          </div>
-        </div>
-
-        <Headersection />
         <section className="hero">
+          {/* user section */}
+          <div className="user">
+            <h1 id="welcome">Welcome... </h1>
+            <div class="mt-3 mb-4 profile-pic">
+              <img src={bgimg} alt="" />
+              <h1>{username}</h1>
+            </div>
+          </div>
+
+          <Headersection />
+
+          {/* hero section */}
           <div className="row container">
             <div className="column">
               <h1>SECURE | MAIL | DELIVERY</h1>
@@ -75,13 +79,11 @@ function Dashboard() {
               </div>
             </div>
           </div>
-        </section>
 
-        {/* this is the feature card section */}
-        <div>
+          {/* feature cards section */}
           <FeatureCard />
           <Footer />
-        </div>
+        </section>
       </div>
     </main>
   );

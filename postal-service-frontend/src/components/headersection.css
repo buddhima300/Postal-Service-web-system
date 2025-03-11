@@ -35,20 +35,6 @@
   font-size: 90px;
   text-transform: uppercase;
 }
-/* .left:nth-child(2) h1 span {
-  color: rgb(145, 76, 76);
-  font-size: 90px;
-  text-transform: uppercase;
-}
-.left:nth-child(2) h1 {
-  color: rgb(192, 192, 192);
-  margin: 2% 0%;
-  font-size: 45px;
-  width: 80%;
-  text-align: left;
-  font-weight: 600;
-  text-transform: capitalize;
-} */
 
 .left p {
   color: gray;
@@ -78,16 +64,6 @@ button {
   margin-top: 5%;
 }
 
-/* #btn:hover,
-:focus {
-  color: #000000;
-  background: var(--yellow-color);
-  border: 1px solid var(--yellow-color);
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-  box-shadow: 0 0 5px var(--yellow-color), 0 0 20px var(--yellow-color),
-    0 0 50px var(--yellow-color), 0 0 100px var(--yellow-color);
-} */
-
 .typewriter h1 {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: 0.15em solid orange; /* The typwriter cursor */
@@ -113,5 +89,61 @@ button {
   }
   50% {
     border-color: orange;
+  }
+}
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 760px) {
+  .header {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10%;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .left h1 {
+    font-size: 30px;
+    width: 100%;
+  }
+  .left h1 span {
+    font-size: 50px;
+  }
+  .left p {
+    width: 100%;
+  }
+  img {
+    height: auto;
+    width: 50%;
+  }
+  button {
+    margin-top: 10%;
+  }
+}
+
+/* Medium devices (tablets, 600px to 768px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    padding-left: 10px;
+    margin-top: 8%;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .left h1 {
+    font-size: 35px;
+    width: 100%;
+  }
+  .left h1 span {
+    font-size: 60px;
+  }
+  .left p {
+    width: 100%;
+  }
+  .right img {
+    width: 100%;
+  }
+  button {
+    margin-top: 8%;
   }
 }

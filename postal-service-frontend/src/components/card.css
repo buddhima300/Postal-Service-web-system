@@ -1,8 +1,12 @@
 @import url(../components/colors.css);
 
 .panel1 {
-  /* background-color: #ebeaea; */
   background-color: white;
+  width: auto;
+  height: auto;
+  margin-left: 350px;
+  display: flex;
+  flex-wrap: wrap;
 }
 #features {
   text-align: center;
@@ -22,8 +26,6 @@
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 50px;
-
-  /* margin-left: 300px; */
 }
 
 .cardbg {
@@ -86,4 +88,45 @@
   margin-top: 20px;
   width: auto;
   font-weight: 500;
+}
+
+/* media queries to make responsive */
+@media only screen and (max-width: 767px) {
+  .panel1 {
+    margin-left: 0;
+  }
+  #features {
+    margin-left: 35%;
+  }
+  .cardline {
+    height: auto;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-left: 20px;
+  }
+  .cardbg {
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 1024px) {
+  .panel1 {
+    margin-left: 0;
+  }
+  #features {
+    margin-left: 35%;
+  }
+  .cardline {
+    height: auto;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-left: 20px;
+  }
+  .cardbg {
+    width: auto;
+  }
 }

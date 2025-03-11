@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React from "react";
 import "./footer.css";
 import { useNavigate } from "react-router-dom";
-import Carosoul from "./Carosoul";
 
 export default function Footer() {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ export default function Footer() {
         <div className="listone">
           <ul>
             <li>
-              <a onClick={() => navigate("/homepage")} href="#">
+              <a onClicks={() => navigate("/homepage")} href="#">
                 DASHBOARD
               </a>
             </li>

@@ -7,6 +7,7 @@ import sideimg3 from "../images/sidebg.png";
 function Headersection() {
   return (
     <div>
+      {/* first section */}
       <div className="header col-md-12">
         <div className="left col-md-6 typewriter">
           <h5>Secure Postal Communication Like Never Before</h5>
@@ -29,6 +30,7 @@ function Headersection() {
           <img src={sideimg} alt="" srcset="" />
         </div>
       </div>
+
       {/* second section */}
       <div className="header col-md-12">
         {/* right section code lines */}
