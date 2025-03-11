@@ -1,21 +1,24 @@
 @import url(../components/colors.css);
 
-/* setting background image */
-.pageimg {
-  display: flex;
-  justify-content: center; /* centers the image */
-  align-items: center; /* vertically centers the image */
-  /* margin-left: 350px; */
-  width: 100%;
-  height: 36%;
+/* setup page into two columns
+first column is for the sidebar
+second column is for the content
+*/
+.encryptpage {
+  display: grid;
+  grid-template-columns: 24% 2fr;
+  margin-top: 0;
 }
-/* .panel1 {
-  width: auto;
-  height: auto;
-  margin-left: 350px;
+.enc-content {
+  padding-left: 350px;
+  background-color: white;
+}
+.headpanel {
   display: flex;
-  flex-wrap: wrap;
-} */
+  align-items: center;
+  padding-right: 2%;
+}
+
 /* how it work section in encryption page */
 .working-section {
   background-color: white;
@@ -63,9 +66,6 @@
   height: auto;
 }
 .uploadbg {
-  /* margin: 50% 25%; */
-  margin-top: 5%;
-
   margin-left: 30%;
   height: auto;
   width: 580px;
@@ -95,15 +95,13 @@
 
 /* bottom right styles */
 .bottomright {
-  /* border: 2px solid rgb(0, 102, 255); */
-  padding-left: 15%;
-  padding-top: 5%;
-  padding-right: 15%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 .extractedtext textarea {
   width: 100%;
   border: 3px solid var(--ash-color);
-  padding-top: 250px;
+  padding-top: 350px;
   overflow-y: scroll;
   text-align: inherit;
   background-image: url(../images/letter\ head.png);
@@ -112,7 +110,6 @@
 }
 
 .algorithmsection {
-  /* border: 2px solid rebeccapurple; */
   display: block;
 }
 .algorithmsection button {
@@ -163,56 +160,133 @@
   font-size: 20px;
 }
 
-#Encrypt-btn {
-  margin-top: 30px;
-  margin-left: auto;
-  font-weight: 600;
-  background-color: var(--basic-color);
-}
-#Encrypt-btn:hover {
-  margin-top: 30px;
-  background: radial-gradient(rgb(220, 60, 23), rgb(122, 0, 37), rgb(64, 0, 0));
+#encryptsection a {
   color: white;
-}
-#clear-btn {
-  display: inline-flex;
-  flex-direction: row;
-  font-weight: 600;
-  margin-top: 30px;
-  /* margin-bottom: 20%; */
-  margin-left: 5%;
-  background-color: gray;
-}
-#clear-btn:hover {
-  background: radial-gradient(rgb(220, 60, 23), rgb(122, 0, 37), rgb(64, 0, 0));
-  color: white;
-}
-#Download-btn {
-  display: inline-flex;
-  flex-direction: row;
-  font-weight: 600;
-  margin-top: 30px;
-  /* margin-bottom: 20%; */
-  margin-left: 5%;
-  /* background-color: var(--red-color); */
-  background-color: transparent;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-#Download-btn a {
-  color: rgb(0, 0, 0);
   text-decoration: none;
 }
-#Download-btn i {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  margin-left: 5px;
+#encryptsection button {
+  margin-left: 10px;
+  background-color: rgb(126, 9, 9);
 }
-#Download-btn:hover {
-  /* background: radial-gradient(rgb(220, 60, 23), rgb(122, 0, 37), rgb(64, 0, 0)); */
-  color: white;
+#encryptsection button:hover {
+  margin-left: 10px;
+  background-color: rgb(25, 38, 75);
 }
 
 .RSA-btn.selected {
   background: radial-gradient(rgb(217, 22, 86), rgb(100, 13, 95));
   color: white;
+}
+
+.encryptpage {
+  display: block;
+}
+.rightside label {
+  font-size: 20px;
+  font-weight: 500;
+}
+.section1 input {
+  width: 100%;
+}
+.section1 i {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.bottom {
+  display: block;
+}
+.bottomleft {
+  display: block;
+}
+
+.uploadfooter {
+  margin-top: 200px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 2px dashed var(--ash-color);
+  background-color: white;
+}
+.uploadfooter .btn {
+  background-color: var(--basic-color);
+  margin-inline-start: 35%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.uploadfooter .btn:hover {
+  background-color: green;
+  color: white;
+  margin-inline-start: 35%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) and (max-width: 1024px) {
+  .headpanel img {
+    display: none;
+  }
+  .headpanel {
+    padding-right: 30%;
+    padding-top: 2%;
+  }
+  .enc-content {
+    margin-top: 30%;
+    padding-left: 0;
+  }
+  .uploadbg {
+    margin-left: 12%;
+    height: auto;
+    width: 580px;
+    border: 3px dashed var(--ash-color);
+  }
+  .bottomright {
+    padding-left: -15%;
+    padding-top: 5%;
+    padding-right: -15%;
+  }
+  .algorithmsection {
+    margin: 0;
+    padding: 0;
+  }
+  .bottomright :nth-child(3) .RSA-btn {
+    border: 2px solid var(--basic-color);
+    color: var(--basic-color);
+    width: 16%;
+    margin-top: 20px;
+    height: 3vh;
+    border-radius: 20px;
+    margin-right: 15px;
+    padding-bottom: 30px;
+  }
+  .bottomright .RSA-btn:hover {
+    border: 2px solid var(--basic-color);
+    color: var(--ash-color);
+  }
+  .bottomright :nth-child(4) .RSA-btn {
+    border: 2px solid var(--basic-color);
+    color: var(--basic-color);
+    width: 30%;
+    margin-top: 20px;
+    height: 3vh;
+    border-radius: 20px;
+    margin-right: 15px;
+    padding-bottom: 30px;
+  }
+  .bottomright :nth-child(4) .RSA-btn:hover {
+    border: 2px solid var(--basic-color);
+    color: var(--ash-color);
+  }
+  #encryptsection a {
+    color: white;
+    text-decoration: none;
+  }
+  #encryptsection button {
+    margin-left: 10px;
+    background-color: rgb(126, 9, 9);
+  }
+  .RSA-btn.selected {
+    background: radial-gradient(rgb(217, 22, 86), rgb(100, 13, 95));
+    color: white;
+  }
 }

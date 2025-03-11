@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../stylings/encryption.css";
-import bgimg from "../images/project small banners2.jpg";
 import logoimg from "../components/post office logo-black.png";
 import SideBarMenuDashboard from "../components/sideBarMenuDashboard";
 import Footer from "../components/Footer";
 import Uploading2 from "../components/Uploading2";
-import Carosoul from "../components/Carosoul";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -307,7 +305,7 @@ export default function Encryption() {
               </div>
             </div>
             {/* download document section */}
-            <div className="algorithmsection">
+            <div className="algorithmsection" id="encryptsection">
               <button
                 type="submit"
                 class="btn btn-primary"
@@ -332,9 +330,7 @@ export default function Encryption() {
             </div>
           </div>
         </div>
-        {/* end of the bottom section design */}
       </div>
-      {/* end of header section */}
 
       <Footer />
     </div>

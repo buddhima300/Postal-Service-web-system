@@ -108,78 +108,78 @@ export default function Encryption() {
 
   return (
     <div classNameName="encryptpage">
-      <SideBarMenuDashboard />
-      <div className="pageimg">
-        {/* <img src={bgimg} alt="" srcset="" /> */}
+      <div className="sidebarside">
+        <SideBarMenuDashboard />
       </div>
-
-      {/* start of header section */}
-      <div className="panel1 col-md-12">
-        <div className="leftside col-md-6">
-          <img src={logoimg} alt="" srcset="" />
-        </div>
-        <div className="rightside col-md-6">
-          <label for="inputAddress2" class="form-label">
-            PRIMARY KEY
-          </label>
-          <div className="section1">
-            <input
-              type="text"
-              className="form-control"
-              value={primarykey}
-              onChange={onchangeKey}
-              id="inputAddress2"
-              placeholder="Your Key"
-            />
-            <i class="bx bx-copy"></i>
-          </div>
-          <label for="inputAddress3" class="form-label">
-            PUBLIC KEY
-          </label>
-          <div className="section1">
-            <input
-              type="text"
-              className="form-control"
-              value={publicKey}
-              onChange={setPublicKey}
-              id="inputAddress2"
-              placeholder="Your Public Key"
-            />
-            <i
-              class="bx bx-copy"
-              onClick={async () => {
-                try {
-                  await navigator.clipboard.writeText(publicKey);
-                  const notify = () =>
-                    toast("public key is copied to clipboard");
-                  notify();
-                } catch (error) {
-                  console.error("Failed to copy key to clipboard", error);
-                }
-              }}
-            ></i>
-          </div>
-        </div>
-
-        {/* start of middle section of showing how it works */}
-        <div className="working-section">
-          <Process />
-        </div>
-
-        <div className="bottomleft col-md-12">
-          <div className="uploadbg">
-            <div className="uploadfooter">
-              <Uploading />
-              <button class="btn btn-primary" onClick={getExtractionData}>
-                EXTRACT TEXT
-              </button>
+      <div className="maincontent">
+        <div className="enc-content col-md-12">
+          <div className="headpanel">
+            <div className="leftside col-md-6">
+              <img src={logoimg} alt="" srcset="" />
+            </div>
+            <div className="rightside col-md-6">
+              <label for="inputAddress2" class="form-label">
+                PRIMARY KEY
+              </label>
+              <div className="section1">
+                <input
+                  type="text"
+                  className="form-control"
+                  value={primarykey}
+                  onChange={onchangeKey}
+                  id="inputAddress2"
+                  placeholder="Your Key"
+                />
+                <i class="bx bx-copy"></i>
+              </div>
+              <label for="inputAddress3" class="form-label">
+                PUBLIC KEY
+              </label>
+              <div className="section1">
+                <input
+                  type="text"
+                  className="form-control"
+                  value={publicKey}
+                  onChange={setPublicKey}
+                  id="inputAddress2"
+                  placeholder="Your Public Key"
+                />
+                <i
+                  class="bx bx-copy"
+                  onClick={async () => {
+                    try {
+                      await navigator.clipboard.writeText(publicKey);
+                      const notify = () =>
+                        toast("public key is copied to clipboard");
+                      notify();
+                    } catch (error) {
+                      console.error("Failed to copy key to clipboard", error);
+                    }
+                  }}
+                ></i>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* start bottom section design */}
-        <div className="bottom col-md-12">
-          {/* <div className="bottomleft col-md-6">
+          {/* start of middle section of showing how it works */}
+          <div className="working-section">
+            <Process />
+          </div>
+
+          <div className="bottomleft col-md-12">
+            <div className="uploadbg">
+              <div className="uploadfooter">
+                <Uploading />
+                <button class="btn btn-primary" onClick={getExtractionData}>
+                  EXTRACT TEXT
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* start bottom section design */}
+          <div className="bottom col-md-12">
+            {/* <div className="bottomleft col-md-6">
             <div className="uploadbg">
               <div className="uploadfooter">
                 <Uploading />
@@ -189,147 +189,152 @@ export default function Encryption() {
               </div>
             </div>
           </div> */}
-          <div className="bottomright col-md-12">
-            <div className="extractedtext">
-              <textarea
-                name="textarea1"
-                value={textExtracted}
-                onChange={(e) => setTextExtracted(e.target.value)} // Allow editing
-                id="extracted_text-area"
-                className="form-control"
-                rows={25}
-                placeholder="This editable text area allows users to review and modify the extracted content as needed before proceeding with encryption or other operations. The editable feature ensures flexibility, enabling users to correct errors or make adjustments to the extracted text directly within the application. This streamlined process enhances user convenience and ensures that the text is accurate and ready for further secure processing."
-              ></textarea>
-            </div>
-            {/* recipent primary key section */}
-            <div className="algorithmsection">
-              <div className="algorithm">
-                <label>RECIPENT PUBLIC KEY</label>
-                <input
-                  type="text"
+            <div className="bottomright col-md-12">
+              <div className="extractedtext">
+                <textarea
+                  name="textarea1"
+                  value={textExtracted}
+                  onChange={(e) => setTextExtracted(e.target.value)} // Allow editing
+                  id="extracted_text-area"
                   className="form-control"
-                  value={recipentKey}
-                  onChange={(e) => setRecipentKey(e.target.value)}
-                  id="recipentkey"
-                  placeholder="Enter recipent public Key"
-                  required
-                />
-                <i
-                  class="bx bx-paste"
-                  onClick={async () => {
-                    try {
-                      const text = await navigator.clipboard.readText();
-                      setRecipentKey(text);
-                      const notify = () => toast("key is pasted");
-                      notify();
-                    } catch (error) {
-                      console.error(
-                        "Failed to paste key from clipboard",
-                        error
-                      );
-                    }
-                  }}
-                ></i>
+                  rows={25}
+                  placeholder="This editable text area allows users to review and modify the extracted content as needed before proceeding with encryption or other operations. The editable feature ensures flexibility, enabling users to correct errors or make adjustments to the extracted text directly within the application. This streamlined process enhances user convenience and ensures that the text is accurate and ready for further secure processing."
+                ></textarea>
               </div>
-            </div>
-            {/* algorithm choosing section */}
-            <div className="algorithmsection">
-              <div className="algorithm">
-                <label>CHOOSE ENCRYPTION ALGORITHM</label>
+              {/* recipent primary key section */}
+              <div className="algorithmsection">
+                <div className="algorithm">
+                  <label>RECIPENT PUBLIC KEY</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={recipentKey}
+                    onChange={(e) => setRecipentKey(e.target.value)}
+                    id="recipentkey"
+                    placeholder="Enter recipent public Key"
+                    required
+                  />
+                  <i
+                    class="bx bx-paste"
+                    onClick={async () => {
+                      try {
+                        const text = await navigator.clipboard.readText();
+                        setRecipentKey(text);
+                        const notify = () => toast("key is pasted");
+                        notify();
+                      } catch (error) {
+                        console.error(
+                          "Failed to paste key from clipboard",
+                          error
+                        );
+                      }
+                    }}
+                  ></i>
+                </div>
+              </div>
+              {/* algorithm choosing section */}
+              <div className="algorithmsection">
+                <div className="algorithm">
+                  <label>
+                    CHOOSE ENCRYPTION <br />
+                    ALGORITHM
+                  </label>
+                  <button
+                    type="button"
+                    className={`RSA-btn ${
+                      selectedAlgorithm === "RSA" ? "selected" : ""
+                    }`}
+                    onClick={() => handleAlgorithmChange("RSA")}
+                  >
+                    RSA
+                  </button>
+                  <ToastContainer />
+                  <button
+                    type="button"
+                    className={`RSA-btn ${
+                      selectedAlgorithm === "AES" ? "selected" : ""
+                    }`}
+                    onClick={() => handleAlgorithmChange("AES")}
+                  >
+                    AES
+                  </button>
+                  <button
+                    type="button"
+                    className={`RSA-btn ${
+                      selectedAlgorithm === "DES" ? "selected" : ""
+                    }`}
+                    onClick={() => handleAlgorithmChange("DES")}
+                  >
+                    DES
+                  </button>
+                  <button
+                    type="button"
+                    className={`RSA-btn ${
+                      selectedAlgorithm === "3DES" ? "selected" : ""
+                    }`}
+                    onClick={() => handleAlgorithmChange("3DES")}
+                  >
+                    3DES
+                  </button>
+                </div>
+              </div>
+              {/* document format section */}
+              <div className="algorithmsection">
+                <div className="algorithm">
+                  <label>
+                    CHOOSE OUTPUT <br />
+                    FORMAT
+                  </label>
+                  <button
+                    type="button"
+                    className={`RSA-btn ${
+                      selectedFormat === "TEXT FILE" ? "selected" : ""
+                    }`}
+                    onClick={() => handleFormatChange("TEXT FILE")}
+                  >
+                    TEXT FILE
+                  </button>
+                  <button
+                    type="button"
+                    className={`RSA-btn ${
+                      selectedFormat === "PDF FILE" ? "selected" : ""
+                    }`}
+                    onClick={() => handleFormatChange("PDF FILE")}
+                  >
+                    PDF FILE
+                  </button>
+                </div>
+              </div>
+              {/* download document section */}
+              <div className="algorithmsection" id="encryptsection">
                 <button
-                  type="button"
-                  className={`RSA-btn ${
-                    selectedAlgorithm === "RSA" ? "selected" : ""
-                  }`}
-                  onClick={() => handleAlgorithmChange("RSA")}
+                  type="submit"
+                  class="btn btn-primary"
+                  id="Encrypt-btn"
+                  onClick={handleEncryption}
                 >
-                  RSA
+                  ENCRYPT DOCUMENT
                 </button>
-                <ToastContainer />
                 <button
-                  type="button"
-                  className={`RSA-btn ${
-                    selectedAlgorithm === "AES" ? "selected" : ""
-                  }`}
-                  onClick={() => handleAlgorithmChange("AES")}
+                  class="btn btn-dark"
+                  onClick={clearTextArea}
+                  id="clear-btn"
                 >
-                  AES
+                  CLEAR EXTRACTED TEXT
                 </button>
-                <button
-                  type="button"
-                  className={`RSA-btn ${
-                    selectedAlgorithm === "DES" ? "selected" : ""
-                  }`}
-                  onClick={() => handleAlgorithmChange("DES")}
-                >
-                  DES
-                </button>
-                <button
-                  type="button"
-                  className={`RSA-btn ${
-                    selectedAlgorithm === "3DES" ? "selected" : ""
-                  }`}
-                  onClick={() => handleAlgorithmChange("3DES")}
-                >
-                  3DES
+                <button class="btn btn-secondary" id="Download-btn">
+                  <a href={`http://localhost:5001/${fileUrl}`} download>
+                    DOWNLOAD DOCUMENT
+                  </a>
+                  <i class="bx bx-download"></i>
                 </button>
               </div>
-            </div>
-            {/* document format section */}
-            <div className="algorithmsection">
-              <div className="algorithm">
-                <label>CHOOSE OUTPUT FORMAT</label>
-                <button
-                  type="button"
-                  className={`RSA-btn ${
-                    selectedFormat === "TEXT FILE" ? "selected" : ""
-                  }`}
-                  onClick={() => handleFormatChange("TEXT FILE")}
-                >
-                  TEXT FILE
-                </button>
-                <button
-                  type="button"
-                  className={`RSA-btn ${
-                    selectedFormat === "PDF FILE" ? "selected" : ""
-                  }`}
-                  onClick={() => handleFormatChange("PDF FILE")}
-                >
-                  PDF FILE
-                </button>
-              </div>
-            </div>
-            {/* download document section */}
-            <div className="algorithmsection">
-              <button
-                type="submit"
-                class="btn btn-primary"
-                id="Encrypt-btn"
-                onClick={handleEncryption}
-              >
-                ENCRYPT DOCUMENT
-              </button>
-              <button
-                class="btn btn-dark"
-                onClick={clearTextArea}
-                id="clear-btn"
-              >
-                CLEAR EXTRACTED TEXT
-              </button>
-              <button class="btn btn-secondary" id="Download-btn">
-                <a href={`http://localhost:5001/${fileUrl}`} download>
-                  DOWNLOAD DOCUMENT
-                </a>
-                <i class="bx bx-download"></i>
-              </button>
             </div>
           </div>
+          {/* end of the bottom section design */}
         </div>
-        {/* end of the bottom section design */}
+        <Footer />
       </div>
-      {/* end of header section */}
-
-      <Footer />
     </div>
   );
 }
