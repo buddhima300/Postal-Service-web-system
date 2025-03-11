@@ -240,7 +240,9 @@ export default function Encryption() {
             {/* algorithm choosing section */}
             <div className="algorithmsection">
               <div className="algorithm">
-                <label>CHOOSE DECRYPTION ALGORITHM</label>
+                <label>
+                  CHOOSE DECRYPTION <br /> ALGORITHM
+                </label>
                 <button
                   type="button"
                   className={`RSA-btn ${

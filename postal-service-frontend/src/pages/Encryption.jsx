@@ -332,8 +332,8 @@ export default function Encryption() {
             </div>
           </div>
           {/* end of the bottom section design */}
+          <Footer />
         </div>
-        <Footer />
       </div>
     </div>
   );
